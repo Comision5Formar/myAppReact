@@ -1,6 +1,7 @@
 import './App.css';
-import Main from './components/Main';
-import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
+import Main from './components/main/Main';
+import Sidebar from './components/sidebar/Sidebar';
 
 function App() {
  
@@ -9,6 +10,7 @@ function App() {
      <Sidebar/>
      <div id="content-wrapper" className="d-flex flex-column">
        <Main/>
+       <Footer/>
      </div>
     </div>
   );
