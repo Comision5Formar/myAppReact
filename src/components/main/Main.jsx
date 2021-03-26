@@ -1,12 +1,31 @@
 import React from 'react'
 import Category from './Category'
 import Data from './Data'
-import Metrica1 from './Metrica1'
-import Metrica2 from './Metrica2'
-import Metrica3 from './Metrica3'
+import Metrica from './Metrica'
 import Navbar from './Navbar'
 
 function Main() {
+
+    let datos = [
+        {
+            color : 'primary',
+            title : 'Products in Data Base',
+            value : 135,
+            icon : 'fa-clipboard-list'
+        },
+        {
+            color : 'success',
+            title : 'Amount in products',
+            value : 546456,
+            icon : 'fa-dollar-sign'
+        },
+        {
+            color : 'warning',
+            title : "Users quantity",
+            value : 38,
+            icon : 'fa-user-check'
+        }
+    ]
     return (
         <div id="content">
 
@@ -19,9 +38,18 @@ function Main() {
             </div>
 
             <div className="row">
-                <Metrica1/>
-                <Metrica2/>
-                <Metrica3/>
+                {
+                    datos.map((dato,i)=>
+                    <Metrica
+                        key = {dato.title + i}
+                        color = {dato.color}
+                        title = {dato.title}
+                        value = {dato.value}
+                        icon = {dato.icon}
+                    />
+                    )
+                }
+           
             </div>
 
             <div className="row">
